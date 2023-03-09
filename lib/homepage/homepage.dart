@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
+import 'package:flutteranimation/homepage/tweenanimation.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -68,6 +69,16 @@ class _HomePageState extends State<HomePage>
             onPressed: () {
               _controller.stop();
             },
+          ),
+          FloatingActionButton(
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const TweenAnimation(),
+                  ));
+            },
+            child: const Icon(Icons.push_pin),
           )
         ],
       ),
